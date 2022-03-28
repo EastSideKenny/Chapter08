@@ -1,8 +1,8 @@
 ﻿using static System.Console;
 
 //WorkingWithLists();
-
-WorkingWithDictionaries();
+//WorkingWithDictionaries();
+WorkingWithQueues();
 
 static void Output(string title, IEnumerable<string> collection)
 {
@@ -84,4 +84,31 @@ static void WorkingWithDictionaries()
     // Lookup a value using a key
     string key = "long";
     WriteLine($"The definition of {key} is {keywords[key]}");
+}
+
+static void WorkingWithQueues()
+{
+    Queue<string> coffee = new();
+
+    coffee.Enqueue("Damir"); // front of queue
+    coffee.Enqueue("Andrea");
+    coffee.Enqueue("Ronald");
+    coffee.Enqueue("Amin");
+    coffee.Enqueue("Irina"); // back of queue
+
+    Output("Initial queue from front to back", coffee);
+
+    // server handles next person in queue
+    string served = coffee.Dequeue();
+    WriteLine($"Served: {served}.");
+
+    // server handles next person in queue
+    served = coffee.Dequeue();
+    WriteLine($"Served: {served}.");
+
+    Output("Current queue from front to back", coffee);
+
+    WriteLine($"{coffee.Peek()} is next in line.");
+
+    Output("Current queue from front to back", coffee);
 }
