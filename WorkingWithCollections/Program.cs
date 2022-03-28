@@ -2,7 +2,8 @@
 
 //WorkingWithLists();
 //WorkingWithDictionaries();
-WorkingWithQueues();
+//WorkingWithQueues();
+WorkingWithPriorityQueues();
 
 static void Output(string title, IEnumerable<string> collection)
 {
@@ -10,6 +11,15 @@ static void Output(string title, IEnumerable<string> collection)
     foreach (string item in collection)
     {
         WriteLine($"    {item}");
+    }
+}
+
+static void OutputPQ<TElement, TPriority>(string title, IEnumerable<(TElement Element, TPriority Priority)> collection)
+{
+    WriteLine(title);
+    foreach ((TElement, TPriority) item in collection)
+    {
+        WriteLine($"    {item.Item1}: {item.Item2}");
     }
 }
 
@@ -111,4 +121,33 @@ static void WorkingWithQueues()
     WriteLine($"{coffee.Peek()} is next in line.");
 
     Output("Current queue from front to back", coffee);
+}
+
+static void WorkingWithPriorityQueues()
+{
+    PriorityQueue<string, int> vaccine = new();
+
+    // add some people
+    // 1 = high priority people in their 70s or poor health
+    // 2 = medium priority e.g. middle aged
+    // 3 = low priority e.g. teens and twenties
+
+    vaccine.Enqueue("Pamela", 1);
+    vaccine.Enqueue("Rebecca", 3);
+    vaccine.Enqueue("Juliet", 2);
+    vaccine.Enqueue("Ian", 1);
+
+    OutputPQ("Current queue for vaccination:", vaccine.UnorderedItems);
+
+    WriteLine($"{vaccine.Dequeue()} has been vaccinated.");
+    WriteLine($"{vaccine.Dequeue()} has been vaccinated.");
+
+    OutputPQ("Current queue for vaccination:", vaccine.UnorderedItems);
+
+    WriteLine($"{vaccine.Dequeue()} has been vaccinated.");
+
+    vaccine.Enqueue("Mark", 2);
+    WriteLine($"{vaccine.Peek()} will be next to be vaccinated.");
+
+    OutputPQ("Current queue for vaccination:", vaccine.UnorderedItems);
 }
