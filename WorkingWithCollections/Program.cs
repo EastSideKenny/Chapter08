@@ -1,9 +1,10 @@
 ﻿using static System.Console;
+using System.Collections.Immutable;
 
-//WorkingWithLists();
+WorkingWithLists();
 //WorkingWithDictionaries();
 //WorkingWithQueues();
-WorkingWithPriorityQueues();
+//WorkingWithPriorityQueues();
 
 static void Output(string title, IEnumerable<string> collection)
 {
@@ -50,6 +51,12 @@ static void WorkingWithLists()
     cities.Remove("Luxembourg");
 
     Output("After removing two cities", cities);
+
+    ImmutableList<string> immutableCities = cities.ToImmutableList();
+    ImmutableList<string> newList = immutableCities.Add("Rio");
+
+    Output("Immutable list of cities:", immutableCities);
+    Output("New list of cities:", newList);
 }
 
 
