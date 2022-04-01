@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithNetworkResources
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithReflection", "WorkingWithReflection\WorkingWithReflection.csproj", "{4485493D-AB42-416F-8692-BC70E10F99DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithImages", "WorkingWithImages\WorkingWithImages.csproj", "{B52FDC8A-9CFB-4A64-B8C6-433D06025C76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithImages", "WorkingWithImages\WorkingWithImages.csproj", "{B52FDC8A-9CFB-4A64-B8C6-433D06025C76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internationalization", "Internationalization\Internationalization.csproj", "{BCF8FE05-0903-41EC-B505-7290C17BE074}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Internationalization", "Internationalization\Internationalization.csproj", "{BCF8FE05-0903-41EC-B505-7290C17BE074}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise8.2", "Exercise8.1\Exercise8.2.csproj", "{0C13910F-3349-480D-8C5E-A0A2ECF751D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{BCF8FE05-0903-41EC-B505-7290C17BE074}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCF8FE05-0903-41EC-B505-7290C17BE074}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCF8FE05-0903-41EC-B505-7290C17BE074}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C13910F-3349-480D-8C5E-A0A2ECF751D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C13910F-3349-480D-8C5E-A0A2ECF751D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C13910F-3349-480D-8C5E-A0A2ECF751D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C13910F-3349-480D-8C5E-A0A2ECF751D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
